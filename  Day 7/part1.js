@@ -1,7 +1,7 @@
 const reader = require("../utils/reader");
 
 const main = (data) => {
-    let ssl_count = 0;
+    let tls_count = 0;
     data.forEach(ip => {
         for (let i = 0; i < ip.length; i++) {
             if (ip[i] === "[") {
@@ -12,10 +12,10 @@ const main = (data) => {
             }
         }
         if (hasABBA(ip)) {
-            ssl_count++;
+            tls_count++;
         }
     });
-    console.log(ssl_count);
+    console.log(tls_count);
 }
 
 
