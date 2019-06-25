@@ -10,7 +10,6 @@ const main = (data) => {
         const hash = md5(room_id + i);
         if (hash.substr(0,5) === "00000") {
             pass.push(hash[5]);
-            console.log(hash[5]);
         }
         i++;
     }
